@@ -16,6 +16,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	runtimeOnly 'org.postgresql:postgresql'
+	implementation 'com.vladmihalcea:hibernate-types-52:2.9.8'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
