@@ -1,4 +1,4 @@
-package com.github.thiago1bd2.citiesapi.staties;
+package com.github.thiago1bd2.citiesapi.states;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

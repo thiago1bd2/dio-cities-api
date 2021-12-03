@@ -1,5 +1,6 @@
-package com.github.thiago1bd2.citiesapi.staties;
+package com.github.thiago1bd2.citiesapi.states;
 
+import com.github.thiago1bd2.citiesapi.countries.Country;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
@@ -26,13 +27,13 @@ public class State {
     private Integer ibge;
 
     /* 1st*/
-    @Column(name = "pais")
-    private Integer countryId;
+//    @Column(name = "pais")
+//    private Integer countryId;
 
     // 2nd - @ManyToOne
-//    @ManyToOne
-//    @JoinColumn(name = "pais", referencedColumnName = "id")
-//    private Country country;
+    @ManyToOne
+    @JoinColumn(name = "pais", referencedColumnName = "id")
+    private Country country;
 
     @Type(type = "jsonb")
     @Basic(fetch = FetchType.LAZY)
@@ -62,11 +63,11 @@ public class State {
         return ddd;
     }
 
-//    public Country getCountry() {
-//        return country;
-//    }
-
-    public Integer getCountryId() {
-        return countryId;
+    public Country getCountry() {
+        return country;
     }
+
+//    public Integer getCountryId() {
+//        return countryId;
+//    }
 }
